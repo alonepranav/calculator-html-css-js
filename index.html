@@ -1,153 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Calculator | HTML, CSS & JS</title>
-    <link rel="stylesheet" href="style.css" />
-    <!-- Icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
-    />
-  </head>
-  <body>
-    <h1>Calculator</h1>
-    <div class="main">
-      <input type="text" name="" id="InputOutput" />
-      <div class="row">
-        <input
-          type="button"
-          style="--color: rgba(13, 255, 0, 0.564)"
-          value="AC"
-          onclick="allClear()"
-        />
-        <input
-          type="button"
-          style="--color: rgb(0, 238, 255)"
-          value="( )"
-          onclick="append(this.value)"
-        />
-        <input
-          type="button"
-          style="--color: rgb(0, 238, 255)"
-          value="%"
-          onclick="append(this.value)"
-        />
-        <input
-          type="button"
-          style="--color: rgb(0, 238, 255)"
-          value="/"
-          onclick="append(this.value)"
-        />
-      </div>
-      <div class="row">
-        <input
-          type="button"
-          style="--color: rgb(229, 229, 229)"
-          value="7"
-          onclick="append(this.value)"
-        />
-        <input
-          type="button"
-          style="--color: rgb(229, 229, 229)"
-          value="8"
-          onclick="append(this.value)"
-        />
-        <input
-          type="button"
-          style="--color: rgb(229, 229, 229)"
-          value="9"
-          onclick="append(this.value)"
-        />
-        <input
-          type="button"
-          style="--color: rgb(0, 238, 255)"
-          value="*"
-          onclick="append(this.value)"
-        />
-      </div>
-      <div class="row">
-        <input
-          type="button"
-          style="--color: rgb(229, 229, 229)"
-          value="4"
-          onclick="append(this.value)"
-        />
-        <input
-          type="button"
-          style="--color: rgb(229, 229, 229)"
-          value="5"
-          onclick="append(this.value)"
-        />
-        <input
-          type="button"
-          style="--color: rgb(229, 229, 229)"
-          value="6"
-          onclick="append(this.value)"
-        />
-        <input
-          type="button"
-          style="--color: rgb(0, 238, 255)"
-          value="-"
-          onclick="append(this.value)"
-        />
-      </div>
-      <div class="row">
-        <input
-          type="button"
-          style="--color: rgb(229, 229, 229)"
-          value="1"
-          onclick="append(this.value)"
-        />
-        <input
-          type="button"
-          style="--color: rgb(229, 229, 229)"
-          value="2"
-          onclick="append(this.value)"
-        />
-        <input
-          type="button"
-          style="--color: rgb(229, 229, 229)"
-          value="3"
-          onclick="append(this.value)"
-        />
-        <input
-          type="button"
-          style="--color: rgb(0, 238, 255)"
-          value="+"
-          onclick="append(this.value)"
-        />
-      </div>
-      <div class="row">
-        <input
-          type="button"
-          style="--color: rgb(229, 229, 229)"
-          value="0"
-          onclick="append(this.value)"
-        />
-        <input
-          type="button"
-          style="--color: rgb(229, 229, 229)"
-          value="."
-          onclick="append(this.value)"
-        />
-        <button
-          type="button"
-          style="--color: rgb(229, 229, 229)"
-          onclick="pop()"
-        >
-          <i class="bi bi-backspace-fill"></i>
-        </button>
-        <input
-          type="button"
-          style="--color: rgb(209, 207, 207)"
-          value="="
-          onclick="equalButton()"
-        />
-      </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculator | HTML, CSS & JS</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/ico">
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
+</head>
+
+<body>
+  <h1>Calculator</h1>
+  <div class="main">
+    <input type="text" name="" id="InputOutput" />
+    <div class="row">
+      <input type="button" style="--color: rgba(13, 255, 0, 0.564)" value="AC" onclick="allClear()" />
+      <input type="button" style="--color: rgb(0, 238, 255)" value="( )" onclick="append(this.value)" />
+      <input type="button" style="--color: rgb(0, 238, 255)" value="%" onclick="append(this.value)" />
+      <input type="button" style="--color: rgb(0, 238, 255)" value="/" onclick="append(this.value)" />
     </div>
-    <script type="text/javascript" src="main.js"></script>
-  </body>
+    <div class="row">
+      <input type="button" style="--color: rgb(229, 229, 229)" value="7" onclick="append(this.value)" />
+      <input type="button" style="--color: rgb(229, 229, 229)" value="8" onclick="append(this.value)" />
+      <input type="button" style="--color: rgb(229, 229, 229)" value="9" onclick="append(this.value)" />
+      <input type="button" style="--color: rgb(0, 238, 255)" value="*" onclick="append(this.value)" />
+    </div>
+    <div class="row">
+      <input type="button" style="--color: rgb(229, 229, 229)" value="4" onclick="append(this.value)" />
+      <input type="button" style="--color: rgb(229, 229, 229)" value="5" onclick="append(this.value)" />
+      <input type="button" style="--color: rgb(229, 229, 229)" value="6" onclick="append(this.value)" />
+      <input type="button" style="--color: rgb(0, 238, 255)" value="-" onclick="append(this.value)" />
+    </div>
+    <div class="row">
+      <input type="button" style="--color: rgb(229, 229, 229)" value="1" onclick="append(this.value)" />
+      <input type="button" style="--color: rgb(229, 229, 229)" value="2" onclick="append(this.value)" />
+      <input type="button" style="--color: rgb(229, 229, 229)" value="3" onclick="append(this.value)" />
+      <input type="button" style="--color: rgb(0, 238, 255)" value="+" onclick="append(this.value)" />
+    </div>
+    <div class="row">
+      <input type="button" style="--color: rgb(229, 229, 229)" value="0" onclick="append(this.value)" />
+      <input type="button" style="--color: rgb(229, 229, 229)" value="." onclick="append(this.value)" />
+      <button type="button" style="--color: rgb(229, 229, 229)" onclick="pop()">
+        <i class="bi bi-backspace-fill"></i>
+      </button>
+      <input type="button" style="--color: rgb(209, 207, 207)" value="=" onclick="equalButton()" />
+    </div>
+  </div>
+  <script type="text/javascript" src="main.js"></script>
+</body>
+
 </html>
